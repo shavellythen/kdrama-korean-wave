@@ -12,4 +12,11 @@ K-Dramas have played a major role in introducing international audiences to Kore
 The goal of this repository is to highlight the cultural and global impact of K-Dramas and how they continue to strengthen Korea’s cultural presence worldwide.
 
 # Data
-Rankings are determined by aggregating data across four independent sources — MyDramaList, Nielsen Korea, Netflix, and IMDb — and averaging each drama's rank position within each source. Dramas with data across more sources carry higher confidence in their final ranking.
+Rankings are determined by aggregating data across four independent sources: MyDramaList, Nielsen Korea, Netflix, and IMDb. I averaged each drama's rank position within each source. Dramas with data across more sources carry higher confidence in their final ranking.
+
+#Files & Sources
+- **top100-dramas-MDL.csv** – Kaggle: Top 100 K-Dramas (Jan 2025). Rankings are averaged from MyDramaList, Nielsen Korea, Netflix, and IMDb. Dramas with more sources have higher confidence. [Link](https://www.kaggle.com/datasets/vitoriapontes/top-100-most-popular-k-dramas-at-january-2025)
+- **duolingo.xlsx** – Trends in Korean language learning. [Link](data/duolingo.xlsx)
+- **kdrama_traingulation.xlsx** – Combines popularity rankings, Google Trends, and language learning data. [Link](data/kdrama_traingulation.xlsx)
+- **Google Trends** – Worldwide search interest in "kdramas" and "south korea" (2004–present). [Trends](https://trends.google.com/trends/explore?geo=Worldwide&geo&q=kdramas%2Csouth%2520korea&date=all)
+
