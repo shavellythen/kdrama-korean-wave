@@ -2,6 +2,7 @@
 This project explores how Korean dramas (K-Dramas) contribute to the global spread of Korean culture, also known as the Korean Wave (Hallyu).
 
 K-Dramas have played a major role in introducing international audiences to Korean language, fashion, music, food, and traditions. Through popular streaming platforms and social media, these dramas reach millions of viewers around the world and help expand interest in other Korean cultural industries such as K-pop, film, and tourism.
+[Live Link](https://www.kaggle.com/datasets/vitoriapontes/top-100-most-popular-k-dramas-at-january-2025](https://shavellythen.github.io/kdrama-korean-wave/)
 
 # Topics Covered
 - The rise of the Korean Wave (Hallyu)
