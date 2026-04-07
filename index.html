@@ -5,24 +5,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How K-Dramas Fuel the Korean Wave</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;700&family=Caveat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <section class="section fade-in">
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-left">
+            <div class="label">Data Story · Korean Wave · Global Culture</div>
+            <h1>How K-Dramas <em>Fuel</em> the Korean Wave</h1>
+            <p class="hero-sub">Korean dramas have transcended screens — sparking global curiosity about Korean food,
+                music, language, and travel. This story traces the patterns of that cultural ripple effect.</p>
+            <div class="hero-stat-row">
+                <div class="hero-stat">
+                    <div class="num">190+</div>
+                    <div class="desc">Countries on Netflix</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">$12B</div>
+                    <div class="desc">Hallyu economic value</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">2X</div>
+                    <div class="desc">K-Drama growth 2019–23</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hanzi-grid">
+                <div class="hanzi-cell">한</div><div class="hanzi-cell">류</div>
+                <div class="hanzi-cell">드</div><div class="hanzi-cell">라</div>
+                <div class="hanzi-cell">마</div><div class="hanzi-cell">韓</div>
+                <div class="hanzi-cell">流</div><div class="hanzi-cell">사</div>
+                <div class="hanzi-cell">랑</div><div class="hanzi-cell">波</div>
+                <div class="hanzi-cell">한</div><div class="hanzi-cell">국</div>
+                <div class="hanzi-cell">어</div><div class="hanzi-cell">문</div>
+                <div class="hanzi-cell">화</div><div class="hanzi-cell">음</div>
+                <div class="hanzi-cell">악</div><div class="hanzi-cell">여</div>
+                <div class="hanzi-cell">행</div><div class="hanzi-cell">한</div>
+                <div class="hanzi-cell">류</div><div class="hanzi-cell">드</div>
+                <div class="hanzi-cell">라</div><div class="hanzi-cell">마</div>
+            </div>
+        </div>
+        <div class="scroll-cue">Scroll</div>
+    </section>
+
+    <canvas id="inkCanvas"></canvas>
+
+    <!-- Film strip -->
+    <div class="film-strip">
+        <div class="film-strip__track">
+            <div class="film-frame film-frame--narrow"><img src="assets/film-01.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--wide"><img src="assets/film-02.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--medium"><img src="assets/film-03.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--narrow"><img src="assets/film-04.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--wide"><img src="assets/film-05.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--medium"><img src="assets/film-06.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--narrow"><img src="assets/film-07.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--wide"><img src="assets/film-08.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--medium"><img src="assets/film-09.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--narrow"><img src="assets/film-10.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--wide"><img src="assets/film-11.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--medium"><img src="assets/film-12.jpg" alt="" loading="lazy"></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="film-frame film-frame--narrow"><img src="assets/film-01.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--wide"><img src="assets/film-02.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--medium"><img src="assets/film-03.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--narrow"><img src="assets/film-04.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--wide"><img src="assets/film-05.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--medium"><img src="assets/film-06.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--narrow"><img src="assets/film-07.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--wide"><img src="assets/film-08.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--medium"><img src="assets/film-09.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--narrow"><img src="assets/film-10.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--wide"><img src="assets/film-11.jpg" alt="" loading="lazy"></div>
+            <div class="film-frame film-frame--medium"><img src="assets/film-12.jpg" alt="" loading="lazy"></div>
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <section class="section intro-section fade-in">
         <div class="section-label">Streaming Seoul</div>
         <h2>How K-Dramas Fuel the Korean Wave</h2>
-        <p>Since the late 1990s, Korean dramas have been quietly reshaping global pop culture. What began as regional popularity in
-        East Asia gained worldwide attention in the mid 2000s and hasn’t slowed down since. Titles like Squid Game, Crash
-        Landing on You, My Love from the Star, and KPop Demon Hunters are more than just entertainment. They serve as entry
-        points into a culture that millions of people around the world are eager to explore.</p>
-            <br/>
-        <p>The <em>Hallyu</em> (한류), the Korean Wave, is the broader movement: the global spread of Korean culture through music, film,
-        food, fashion, and language. K-Dramas sit at its heart, the emotional hook that turns casual viewers into people who
-        start learning the language, booking flights to Seoul, and cooking the food they saw on screen.</p>
+        <p>Since the late 1990s, Korean dramas have been quietly reshaping global pop culture. What began as regional
+            popularity in East Asia gained worldwide attention in the mid 2000s and hasn't slowed down since. Titles like
+            Squid Game, Crash Landing on You, My Love from the Star, and KPop Demon Hunters are more than just
+            entertainment. They serve as entry points into a culture that millions of people around the world are eager to
+            explore.</p>
+        <br>
+        <p>The <em>Hallyu</em> (한류), the Korean Wave, is the broader movement: the global spread of Korean culture through
+            music, film, food, fashion, and language. K-Dramas sit at its heart, the emotional hook that turns casual
+            viewers into people who start learning the language, booking flights to Seoul, and cooking the food they saw on
+            screen.</p>
         <div class="source-note">
             <p>Sources</p>
             <p>¹ Korean Cultural Centre UK (KCCUK). "Hallyu (Korean Wave)." kccuk.org.uk</p>
@@ -30,36 +109,124 @@
         </div>
     </section>
 
+    <!-- Charts -->
     <section class="viz-section">
         <div class="viz-inner">
+
+            <!-- Top 10 & Genre side by side -->
             <div class="two-col">
                 <div class="chart-card fade-in">
                     <div class="chart-title">Top 10 Most Watched K-Dramas</div>
-                    <div class="chart-subtitle">MYDRAMMALIST WATCHERS × SOURCE: KAGGLE</div>
+                    <div class="chart-subtitle">MYDRAMALIST WATCHERS · SOURCE: KAGGLE</div>
                     <div class="chart-area" id="chart-ratings"></div>
                 </div>
                 <div class="chart-card fade-in">
                     <div class="chart-title">K-Drama Genres</div>
-                    <div class="chart-subtitle">GENRES ACROSS 100 K-DRAMAS × SOURCE: KAGGLE</div>
-                    <div class="chart-area" id="chart-genres"></div>
+                    <div class="chart-subtitle">ALL 101 MDL DRAMAS VS TOP 15 CROSS-VALIDATED HITS · SOURCE: MYDRAMALIST / KAGGLE</div>
+                    <div class="chart-area" id="chart-genres" style="min-height:430px;"></div>
+                </div>
+            </div>
+
+            <!-- Korean Language timeline (moved above impact chart) -->
+            <div class="chart-card fade-in" style="margin-bottom:40px;">
+                <div class="chart-title">Korean Language on the Rise</div>
+                <div class="chart-subtitle">DUOLINGO GLOBAL LANGUAGE RANKING · 2019–2025</div>
+                <div class="chart-area" id="chart-timeline"></div>
+                <div class="legend" id="legend-timeline"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Cultural Impact -->
+    <section class="wave-section">
+        <div class="wave-inner">
+            <div class="section-label">Cultural Ripple Effect</div>
+            <h2>Beyond the Screen</h2>
+            <p>Every drama watched plants a seed of curiosity. Viewers don't stop at the credits, they search for
+                Korean recipes, stream K-Pop playlists, study Hangul, and book flights to Seoul.</p>
+
+            <div class="influence-grid">
+                <div class="influence-card fade-in">
+                    <div class="influence-circle">
+                        <img src="assets/icons-05color.png" alt="Korean food" loading="lazy">
+                    </div>
+                    <div class="influence-label">Food</div>
+                    <div class="influence-title">Korean Cuisine Goes Global</div>
+                    <div class="influence-desc">Searches for Korean ramen, tteokbokki, and Korean BBQ spike after viral
+                        drama scenes featuring food.</div>
+                </div>
+                <div class="influence-card fade-in">
+                    <div class="influence-circle">
+                        <img src="assets/icons-06color.png" alt="K-Pop concert" loading="lazy">
+                    </div>
+                    <div class="influence-label">Music</div>
+                    <div class="influence-title">OSTs Fuel K-Pop Discovery</div>
+                    <div class="influence-desc">K-Drama soundtracks introduce millions to Korean artists, acting as a
+                        gateway into the wider K-Pop world.</div>
+                </div>
+                <div class="influence-card fade-in">
+                    <div class="influence-circle">
+                        <img src="assets/icons-07color.png" alt="Seoul travel" loading="lazy">
+                    </div>
+                    <div class="influence-label">Travel</div>
+                    <div class="influence-title">Seoul Tourism Surges</div>
+                    <div class="influence-desc">Filming locations become famous sites. Tourism Korea reports
+                        drama-related visits consistently growing year-on-year.</div>
+                </div>
+                <div class="influence-card fade-in">
+                    <div class="influence-circle">
+                        <img src="assets/icons-08color.png" alt="Learning Korean" loading="lazy">
+                    </div>
+                    <div class="influence-label">Language</div>
+                    <div class="influence-title">Hangul Learning Explodes</div>
+                    <div class="influence-desc">Duolingo's Korean course grew 40% in the year after Squid Game's release a direct proof of drama-driven curiosity.</div>
+                </div>
+            </div>
+
+            <!-- Cultural Impact chart (now below the timeline) -->
+            <div style="margin-top:20px;">
+                <div class="chart-card fade-in">
+                    <div class="chart-title">Cultural Interest Spikes Following Major K-Drama Releases</div>
+                    <div class="chart-subtitle">RELATIVE GOOGLE SEARCH INCREASE (%) WITHIN 30 DAYS OF PREMIERE</div>
+                    <div class="chart-area" id="chart-impact"></div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Conclusion — left text + right image -->
+    <section class="conclusion-section">
+        <div class="conclusion-inner fade-in">
+            <div class="conclusion-text">
+                <div class="section-label">Reflection</div>
+                <h2>Entertainment as a Cultural Bridge</h2>
+                <p>The data shows that K Dramas are not a passing trend but a sustained and growing force in global culture that transforms
+                viewers into engaged participants in Korean life. Their emotional themes such as love, sacrifice, family, and ambition
+                resonate universally, driving the continued expansion of Hallyu. As streaming platforms remove geographic barriers and
+                audiences seek more authentic storytelling, Korean dramas demonstrate that powerful narratives can transcend language
+                and culture, and the momentum behind this global influence continues to grow.</p>
+            
+            </div>
+            <div class="conclusion-image">
+                <img src="assets/icons-09color.png" alt="Korean wave illustration" loading="lazy">
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>DATA SOURCES: Data on Top 10 Most Watched K-Dramas and genres were sourced from <a href="https://mydramalist.com"
-                target="_blank" style="color:inherit">MyDramaList (mydramalist.com)</a>, the world's largest K-Drama tracking
-            platform.<br /> Dataset compiled by Vitoria Pontes via <a
-                href="https://www.kaggle.com/datasets/vitoriapontes/top-100-most-popular-k-dramas-at-january-2025"
-                target="_blank" style="color:inherit">Kaggle</a> (January 30, 2025). Used for educational purposes.
-        </p>
+        <div class="footer-inner">
+            <p>DATA SOURCES: Data on Top 10 Most Watched K-Dramas and genres were sourced from <a
+                    href="https://mydramalist.com" target="_blank">MyDramaList (mydramalist.com)</a>, the world's largest
+                K-Drama tracking platform. Dataset compiled by Vitoria Pontes via <a
+                    href="https://www.kaggle.com/datasets/vitoriapontes/top-100-most-popular-k-dramas-at-january-2025"
+                    target="_blank">Kaggle</a> (January 30, 2025). Used for educational purposes.</p>
+        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-    <script src="js/charts.js"></script>
-
+    <script src="charts.js"></script>
+    <script src="ink-scroll-engine.js"></script>
 </body>
 
 </html>
