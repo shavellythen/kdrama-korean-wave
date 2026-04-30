@@ -16,8 +16,8 @@ The goal of this repository is to highlight the cultural and global impact of K-
 Rankings are determined by aggregating data across four independent sources: MyDramaList, Nielsen Korea, Netflix, and IMDb. I averaged each drama's rank position within each source. Dramas with data across more sources carry higher confidence in their final ranking.
 
 #Files & Sources
-- **top100-dramas-MDL.csv** – Kaggle: Top 100 K-Dramas (Jan 2025). Rankings are averaged from MyDramaList, Nielsen Korea, Netflix, and IMDb. Dramas with more sources have higher confidence. [Link](https://www.kaggle.com/datasets/vitoriapontes/top-100-most-popular-k-dramas-at-january-2025)
+- **top100-dramas-MDL.csv** – Kaggle: Top 100 K-Dramas (Jan 2025). Rankings are averaged from MyDramaList, Nielsen Korea, Netflix, and IMDb. Dramas with more sources have higher confidence. [Link](data/top100-dramas-MDL.csv)
 - **duolingo.xlsx** – Trends in Korean language learning. [Link](data/duolingo.xlsx)
 - **kdrama_traingulation.xlsx** – Combines popularity rankings, Google Trends, and language learning data. [Link](data/kdrama_triangulation_updated.xlsx)
-- **Google Trends** – Worldwide search interest in "kdramas" and "south korea" (2004–present). [Trends Summary](data/cultural_impact_google_trends.xlsx) [Raw Trends](data/cultural-grouped-bars-raw.csv)
+- **Google Trends** – Worldwide search interest in "kdramas" and "south korea" (2004–present). [Trends Summary](data/cultural_impact_google_trends.xlsx)  /  [Raw Trends](data/cultural-grouped-bars-raw.csv)
 
