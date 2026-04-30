@@ -78,7 +78,7 @@ body {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background-image: url("/assets/dancheong-pattern.jpeg");
+    background-image: url("../assets/dancheong-pattern.jpeg");
     background-size: cover;
     background-position: center;
     opacity: 0.22;
@@ -665,7 +665,7 @@ footer {
     position: relative;
     z-index: 5;
     overflow: hidden;
-    background-image: url("/assets/dancheong-pattern.jpeg");
+    background-image: url("../assets/dancheong-pattern.jpeg");
     background-size: cover;
     background-position: center;
     padding: 60px var(--space-lg) 48px;
